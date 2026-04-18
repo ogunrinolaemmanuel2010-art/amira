@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation | AMIRA GOLD</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg-dark: #121212;
+            --bg-card: #1d1d1d;
+            --gold: #d7b96a;
+            --gold-soft: #9c854a;
+            --text-main: #f5f5f5;
+            --text-muted: #bdbdbd;
+            --success: #71c97a;
+        }
+
+        body {
+            min-height: 100svh;
+            background:
+                radial-gradient(circle at 15% 15%, rgba(215, 185, 106, 0.12), transparent 35%),
+                radial-gradient(circle at 85% 85%, rgba(215, 185, 106, 0.1), transparent 40%),
+                var(--bg-dark);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-main);
+            padding: 24px;
+            display: grid;
+            place-items: center;
+        }
+
+        .card {
+            width: min(640px, 100%);
+            background: linear-gradient(180deg, #232323 0%, var(--bg-card) 100%);
+            border-radius: 20px;
+            padding: 34px 30px;
+            border: 1px solid rgba(215, 185, 106, 0.28);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 14px;
+            border-radius: 999px;
+            background: rgba(113, 201, 122, 0.12);
+            color: var(--success);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            color: var(--gold);
+            font-size: 35px;
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+
+        .lead {
+            font-size: 18px;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .sub {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        .next-steps {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .next-steps h2 {
+            font-size: 16px;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .next-steps p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .actions a {
+            display: inline-block;
+            text-decoration: none;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 100%);
+            color: #191919;
+            font-weight: 700;
+            font-size: 14px;
+            min-height: 44px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            transition: transform 0.2s ease, filter 0.2s ease;
+        }
+
+        .actions a:hover {
+            transform: translateY(-1px);
+            filter: brightness(1.05);
+        }
+
+        .brand {
+            margin-top: 18px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #8f8f8f;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            .card {
+                border-radius: 16px;
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: clamp(1.7rem, 9vw, 2rem);
+            }
+
+            .lead {
+                font-size: 16px;
+            }
+
+            .sub {
+                font-size: 14px;
+            }
+
+            .next-steps {
+                padding: 14px;
+                margin-bottom: 18px;
+            }
+
+            .actions a {
+                width: 100%;
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 390px) {
+            body {
+                padding: 8px;
+            }
+
+            .card {
+                padding: 18px 12px;
+                border-radius: 14px;
+            }
+        }
+
+        @media (max-height: 740px) and (max-width: 600px) {
+            body {
+                place-items: start center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="status">Order received</div>
+        <h1>You're all set.</h1>
+        <p class="lead">Thank you for submitting your order request.</p>
+        <p class="sub">Our team will review your details and contact you shortly with confirmation and the next steps.</p>
+
+        <section class="next-steps">
+            <h2>What happens next</h2>
+            <p>1. We verify your order information.</p>
+            <p>2. We contact you for confirmation.</p>
+            <p>3. We finalize delivery or pickup arrangements.</p>
+        </section>
+
+        <div class="actions">
+            <a href="./index.html">Back to form</a>
+        </div>
+
+        <p class="brand">AMIRA GOLD</p>
+    </main>
+</body>
+</html>

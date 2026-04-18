@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #121212;
+    --card-bg: #1d1d1d;
+    --card-top: #232323;
+    --gold: #d7b96a;
+    --gold-deep: #9c854a;
+    --text-main: #f3f3f3;
+    --text-muted: #b8b8b8;
+    --field-bg: #2c2c2c;
+    --field-border: #444;
+}
+
+body {
+    min-height: 100svh;
+    padding: 24px;
+    display: grid;
+    place-items: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-main);
+    background:
+        radial-gradient(circle at 12% 15%, rgba(215, 185, 106, 0.14), transparent 36%),
+        radial-gradient(circle at 88% 84%, rgba(215, 185, 106, 0.12), transparent 42%),
+        var(--bg-dark);
+}
+
+.container {
+    width: min(640px, 100%);
+    margin: 14px auto;
+    padding: 32px 28px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, var(--card-top) 0%, var(--card-bg) 100%);
+    border: 1px solid rgba(215, 185, 106, 0.28);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+}
+
+.gold {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.brand-tag {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    color: #111;
+    background: var(--gold);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.gold h1 {
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    line-height: 1.15;
+    margin-bottom: 10px;
+    color: var(--gold);
+}
+
+.subtitle {
+    max-width: 50ch;
+    margin: 0 auto;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.order-form {
+    display: grid;
+    gap: 16px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+label {
+    color: #efefef;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    border: 1px solid var(--field-border);
+    border-radius: 11px;
+    background-color: var(--field-bg);
+    color: var(--text-main);
+    min-height: 44px;
+    padding: 12px 14px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9b9b9b;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(215, 185, 106, 0.16);
+    background-color: #313131;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.phone-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.phone-row select {
+    width: 46%;
+}
+
+.phone-row input {
+    width: 54%;
+}
+
+button {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    min-height: 46px;
+    padding: 13px 18px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+    color: #1b1b1b;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.04);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 22px 14px;
+        border-radius: 16px;
+        margin: 0;
+    }
+
+    .phone-row {
+        flex-direction: column;
+    }
+
+    .phone-row select,
+    .phone-row input {
+        width: 100%;
+    }
+
+    .gold {
+        margin-bottom: 18px;
+    }
+
+    .gold h1 {
+        font-size: clamp(1.7rem, 8vw, 2.1rem);
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .order-form {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 390px) {
+    body {
+        padding: 8px;
+    }
+
+    .container {
+        padding: 18px 12px;
+        border-radius: 14px;
+    }
+
+    .brand-tag {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        font-size: 16px;
+    }
+}
+
+@media (max-height: 740px) and (max-width: 600px) {
+    body {
+        place-items: start center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
