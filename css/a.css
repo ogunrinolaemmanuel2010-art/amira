@@ -136,19 +136,24 @@ textarea {
     width: 54%;
 }
 
-button {
+a{
     width: 100%;
+    text-align: center;
     border: none;
     border-radius: 12px;
     min-height: 46px;
     padding: 13px 18px;
     background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
-    color: #1b1b1b;
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.2px;
     cursor: pointer;
     transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+a{
+    text-decoration: none;
+      color: #1b1b1b;
 }
 
 button:hover {
