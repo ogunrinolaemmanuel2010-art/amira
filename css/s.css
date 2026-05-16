@@ -150,6 +150,37 @@
             }
         }
 
+        .my-popup {
+             background: linear-gradient(180deg, #232323 0%, var(--bg-card) 100%);
+            border: 1px solid rgba(215, 185, 106, 0.28);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+            border-radius: 20px;
+            line-height: 0;
+            width: 400px;
+            height: 250px;
+        }
+
+        .my-title {
+            font-size: 16px;
+            color: gray;
+        }   
+
+        .my-icon {
+            size: 20px;
+        }
+
+        .my-button {
+             background: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 100%) !important;
+            width: 100% !important;
+            text-align: center !important;
+            border-radius: 5px !important;
+             font-size: 15px !important;
+            font-weight: 700 !important;
+            cursor: pointer !important;
+            color: #111;
+            transition: transform 0.2s ease, filter 0.2s ease !important;
+        }
+
         @media (max-width: 390px) {
             body {
                 padding: 8px;

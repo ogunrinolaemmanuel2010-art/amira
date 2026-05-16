@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/a.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>AMIRA GOLD | Order Request</title>
 </head>
 
 <body>
-    <main class="container">
+    <main class="container" id="main">
         <header class="gold">
             <p class="brand-tag">Premium Jewelry Services</p>
             <h1>AMIRA GOLD</h1>
@@ -19,7 +20,7 @@
         <form action="./success.html" method="get" class="order-form">
             <div class="input">
                 <label for="full_name">Full name</label>
-                <input id="full_name" name="full_name" type="text" placeholder="Enter your full name" required>
+                <input id="fullname" name="full_name" type="text" placeholder="Enter your full name" required>
             </div>
 
             <div class="input">
@@ -30,7 +31,7 @@
             <div class="input">
                 <label for="phone_number">Phone number</label>
                 <div class="phone-row">
-                    <select name="country_code" aria-label="Country code">
+                    <select id="code" name="country_code" aria-label="Country code">
                         <option value="+1">United States (+1)</option>
                         <option value="+44">United Kingdom (+44)</option>
                         <option value="+234">Nigeria (+234)</option>
@@ -40,15 +41,15 @@
                         <option value="+27">South Africa (+27)</option>
                         <option value="+233">Ghana (+233)</option>
                     </select>
-                    <input id="phone_number" type="tel" name="phone_number" inputmode="tel" placeholder="Phone number"
+                    <input id="phonenumber" type="tel" name="phone_number" inputmode="tel" placeholder="Phone number"
                         required>
                 </div>
             </div>
 
             <div class="input">
                 <label for="gold_type">Gold type</label>
-                <select name="gold_type" id="gold_type" required>
-                    <option value="" selected disabled>Select an item</option>
+                <select name="gold_type" id="goldtype" required>
+                    <option value="">Select an item</option>
                     <option value="Necklace">Necklace</option>
                     <option value="Ring">Ring</option>
                     <option value="Bracelet">Bracelet</option>
@@ -68,10 +69,43 @@
             </div>
 
             <div class="input">
-                <a href="./html/success.html">Submit Request</a>
+                <a onclick="alert()">Submit Request</a>
             </div>
         </form>
     </main>
+
+    <script>
+        // let main = document.getElementById('main');
+        let fullname = document.getElementById('fullname');
+        let email = document.getElementById('email');
+        let code = document.getElementById('code');
+        let phonenumber = document.getElementById('phonenumber')
+        let goldtype = document.getElementById('goldtype');
+        let grams = document.getElementById('grams');
+        let description = document.getElementById('description');
+
+        // let = [];
+        function alert() {
+            Swal.fire({
+                title: 'Order received',
+                icon: 'success',
+                confirmButtonText: 'Continue',
+
+                customClass: {
+                    popup: 'my-popup',
+                    title: 'my-title',
+                    htmlContainer: 'my-text',
+                    confirmButton: 'my-button',
+                    icon: 'my-icon'
+                }
+            }).then(() => {
+                window.location.href = "./html/success.html"
+            });
+
+        }
+    </script>
+
+    </style>
 </body>
 
 </html>

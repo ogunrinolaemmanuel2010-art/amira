@@ -136,7 +136,7 @@ textarea {
     width: 54%;
 }
 
-a{
+a {
     width: 100%;
     text-align: center;
     border: none;
@@ -151,9 +151,9 @@ a{
     transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-a{
+a {
     text-decoration: none;
-      color: #1b1b1b;
+    color: #1b1b1b;
 }
 
 button:hover {
@@ -163,6 +163,37 @@ button:hover {
 
 button:active {
     transform: translateY(0);
+}
+
+.my-popup {
+    background: linear-gradient(180deg, var(--card-top) 0%, var(--card-bg) 100%);
+    border: 1px solid rgba(215, 185, 106, 0.28);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+    border-radius: 20px;
+    line-height: 0;
+    width: 400px;
+    height: 250px;
+}
+
+.my-title {
+    font-size: 16px;
+    color: gray;
+}
+
+.my-icon {
+    size: 20px;
+}
+
+.my-button {
+    width: 100% !important;
+    text-align: center !important;
+    border-radius: 5px !important;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%) !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    color: #111;
+    transition: transform 0.2s ease, filter 0.2s ease !important;
 }
 
 @media (max-width: 600px) {
